@@ -1,0 +1,65 @@
+<html>
+<script type="text/javascript">
+	//1.1 javascript脚本在网页里的几种写法，语法，变量类型。
+		//js中所有定义变量都用var关键字
+		//字符串、数字、布尔、数组、对象、null、undefined
+		var string ='asdasd';//字符串
+		var number =234234.34;//数字 小数
+		var bool   =true;// 布尔true:1 false:0
+		var array  =['34','2',234,true];//数组
+		var object =new Date();//new的都是对象
+		//alert(object instanceof Object);//判断是否来自同一类型
+		//console.log(array)
+		//var empty= null;//null 表示尚未存在的对象
+		//var undefine=undefined;//undefined 变量还未被初始化时
+	//1.2 JS控制HTML属性（HTML DOM）和JS控制CSS属性（CSS DOM）及类样式。
+		function addTr(){
+		/*	for (var i = 0; i < 10; i++) {
+				if(i%2==0){
+					continue;
+				}
+				var tr='<tr><td>'+i+'</td></tr>';
+				document.getElementById("mytable").innerHTML+=tr;//JS控制HTML属性
+			}*/
+			var tmp=0;
+			for(var t in array){
+				alert(array[t])
+			}
+			/*do{
+				var tr='<tr><td>1</td></tr>';
+				document.getElementById("mytable").innerHTML+=tr;//
+			}while(1=2)
+			*/
+			/*while(tmp<10){
+				var tr='<tr><td>1</td></tr>';
+				document.getElementById("mytable").innerHTML+=tr;//
+				tmp+=1;
+			}*/
+
+			//document.getElementById("mytable").style.background='blue';//S控制CSS属性
+		}
+		var result=addTr();
+		//alert(result)
+		//result=true
+		//=和+=   ＝代表把右边值赋给左边，＋＝再原来的基础上再加上右边的值
+		//var a=1;
+		//a+=1;//2
+		
+	//1.3 条件判断语句（if else,三元运算符，if else if和switch的区别），break和return,continue的应用和区别
+		//var temp=1;//判断条件?true的情况:false的情况
+		//alert(temp=='1'?'a':'b');
+	//1.4 循环的几样写法（for,while,do while,for in )及相互代替的写法。
+</script>
+<body>
+<table id="mytable" style="background:red">
+	<tr>
+		<td>1</td>
+		<td>button</td>
+	</tr>
+
+</table>
+<button id="mybutton" onclick="addTr()">press</button>
+</body>
+</html>
+写一个按钮，每点一次按钮给下面的表格增加一条记录，表格颜色每隔一行一个颜色
+表格包含两列一列是行号，一列是按钮点击表格内按钮，改变当前tr的颜色
